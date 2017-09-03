@@ -2,10 +2,12 @@
 # SQL Server for linux in docker
 # ----------------------------------------------------------------------------------------------------------------------
 docker-csharp-web:
-  container_name: docker-csharp-web
-  image: csharp-web:latest
-  environment:
-    - INSTANCE=local
+  container_name: asp-net-web-app
+  image: asp-net-web-app:latest
+  ports:
+   - 5000:5000
+  expose:
+    - 5000
 
 # ----------------------------------------------------------------------------------------------------------------------
 # MS SQL Server docker image for linux

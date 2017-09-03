@@ -10,7 +10,7 @@ function run() {
     echo "Starting ASP.net web application..."
     echo " -----------------------------------------------------------------------------"
 
-    dotnet docker-csharp-web.dll
+    dotnet WebApplicationBasic.dll
 }
 
 run

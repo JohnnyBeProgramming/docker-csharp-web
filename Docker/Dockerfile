@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------------------------------------------------
 # Dotnet SDK build environment
 # ----------------------------------------------------------------------------------------------------------------------
-FROM microsoft/dotnet:2.0-sdk AS dotnet-build-env
+FROM microsoft/dotnet:1.0.5-sdk AS dotnet-build-env
 WORKDIR /usr/src
 
 # Copy csproj and restore as distinct layers
@@ -16,7 +16,7 @@ RUN ls -la /usr/dist
 # ----------------------------------------------------------------------------------------------------------------------
 # Build runtime image
 # ----------------------------------------------------------------------------------------------------------------------
-FROM microsoft/dotnet:2.0.0-runtime
+FROM microsoft/dotnet:1.0.5-runtime
 WORKDIR /usr/dist
 
 # Copy compiled sources from builder image
