@@ -1,9 +1,9 @@
 # ----------------------------------------------------------------------------------------------------------------------
 # SQL Server for linux in docker
 # ----------------------------------------------------------------------------------------------------------------------
-docker-csharp-web:
-  container_name: asp-net-web-app
-  image: asp-net-web-app:latest
+asp-net-web-api:
+  container_name: asp-net-web-api
+  image: asp-net-web-api:latest
   ports:
    - 5000:5000
   expose:

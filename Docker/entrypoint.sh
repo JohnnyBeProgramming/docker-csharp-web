@@ -4,13 +4,12 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-
 function run() {
     echo " -----------------------------------------------------------------------------"
-    echo "Starting ASP.net web application..."
+    echo "Starting ASP.net Web API..."
     echo " -----------------------------------------------------------------------------"
 
-    dotnet WebApplicationBasic.dll
+    dotnet asp-net-web-api.dll
 }
 
 run

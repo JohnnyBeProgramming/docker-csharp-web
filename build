@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 # -----------------------------------------------------------------------------
-IMAGE_NAME=${IMAGE_NAME:-"asp-net-web-app:latest"}
+IMAGE_NAME=${IMAGE_NAME:-"asp-net-web-api:latest"}
 
 function run() {
     if [ "${1:-}" == "local" ]

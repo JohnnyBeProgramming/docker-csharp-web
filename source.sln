@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "docker-csharp-web", "Source/docker-csharp-web.csproj", "{E376B1AF-4A7B-49EC-9B67-2C76C66E35B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asp-net-web-api", "asp-net-web-api.csproj", "{E376B1AF-4A7B-49EC-9B67-2C76C66E35B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B7E9195-B9F7-499D-BB6E-3271489F771C}"
 EndProject
