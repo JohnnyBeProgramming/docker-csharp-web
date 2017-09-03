@@ -10,7 +10,7 @@ RUN dotnet restore
 
 # Copy everything else and build
 COPY ./ ./
-RUN dotnet publish -c Release -o /usr/dist WebApplicationBasic.csproj
+RUN dotnet publish -c Release -o /usr/dist
 RUN ls -la /usr/dist
 
 # ----------------------------------------------------------------------------------------------------------------------

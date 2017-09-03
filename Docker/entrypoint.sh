@@ -10,7 +10,7 @@ function run() {
     echo "Starting ASP.net web application..."
     echo " -----------------------------------------------------------------------------"
 
-    dotnet WebApplicationBasic.dll
+    dotnet MyCLI.dll
 }
 
 run
