@@ -5,12 +5,12 @@ FROM microsoft/dotnet:2.0-sdk AS dotnet-build-env
 WORKDIR /usr/src
 
 # Copy csproj and restore as distinct layers
-COPY ./Source/*.csproj ./
+COPY ./*.csproj ./
 RUN dotnet restore
 
 # Copy everything else and build
-COPY ./Source ./
-RUN dotnet publish -c Release -o /usr/dist
+COPY ./ ./
+RUN dotnet publish -c Release -o /usr/dist WebApplicationBasic.csproj
 RUN ls -la /usr/dist
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -24,6 +24,6 @@ COPY --from=dotnet-build-env /usr/dist .
 
 # Copy settings and entrypoint
 ADD ./Docker/entrypoint.sh .
-ADD ./Source/appsettings.json .
+ADD ./appsettings.json .
 
 ENTRYPOINT ["./entrypoint.sh"]
