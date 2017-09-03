@@ -1,0 +1,25 @@
+FROM microsoft/dotnet:1.1.2-runtime
+
+# Create app directory
+RUN mkdir -p /usr/dist
+WORKDIR /usr/dist
+
+# Copy project.json and restore as distinct layers
+# COPY project.json .
+# RUN dotnet restore
+
+# Copy sources and required files
+# WORKDIR /usr/src
+# RUN mkdir -p /usr/src
+# ADD . /usr/src
+
+# Build the dotnet app in Release mode
+# RUN dotnet --version
+# RUN dotnet publish -c Release -o out
+# RUN rm -rf /usr/src
+
+ADD ./dist .
+ADD ./appsettings.json .
+ADD ./Docker/entrypoint.sh .
+
+ENTRYPOINT ["./entrypoint.sh"]
